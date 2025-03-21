@@ -1,0 +1,245 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f4f8, #d9e3f0);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* --- Menu de navigation --- */
+header {
+    background: #2c3e50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li .btn {
+    text-decoration: none;
+    color: #ecf0f1;
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.menu ul li .btn:hover {
+    background: linear-gradient(to bottom, #2980b9, #1c6690);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Formulaire centré --- */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+form {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+.btn-submit {
+    background: linear-gradient(to bottom, #27ae60, #219150);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(to bottom, #219150, #1e7b40);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Bouton déconnexion stylé --- */
+.btn-deconnexion {
+    background: linear-gradient(145deg, #e74c3c, #c0392b); /* Dégradé rouge */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour effet de profondeur */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-deconnexion:hover {
+    background: linear-gradient(145deg, #c0392b, #e74c3c); /* Inverse le dégradé pour effet dynamique */
+    transform: translateY(-3px); /* Effet de bouton "pressé" au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 -6px 8px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+}
+
+.btn-deconnexion:active {
+    transform: translateY(1px); /* Effet de clic appuyé */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-buttons {
+    display: flex;
+}
+
+.menu-buttons .btn-menu {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    margin-left: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-buttons .btn-menu:hover {
+    background: linear-gradient(to bottom, #2980b9, #1c6690);
+    transform: translateY(-3px); /* Effet de survol */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.menu-buttons .btn-menu:active {
+    transform: translateY(1px); /* Effet de clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Styles pour le tableau --- */
+.table-container {
+    width: 100%;
+    max-width: 1200px; /* Largeur maximale du tableau */
+    margin: 20px auto; /* Centrage avec marges */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour le conteneur */
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Fusion des bordures */
+    border-radius: 8px;
+    overflow: hidden; /* Assure que le border-radius fonctionne */
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px; /* Espacement interne */
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Ligne de séparation */
+    color: #333; /* Couleur du texte */
+    font-size: 1rem;
+}
+
+th {
+    background-color: #3498db; /* Couleur d'en-tête */
+    color: #fff;
+    text-transform: uppercase; /* Texte en majuscules */
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Lignes paires avec une couleur plus claire */
+}
+
+tr:hover {
+    background-color: #eaf2fd; /* Effet de survol */
+    transition: background-color 0.3s ease;
+}
+
+caption {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+} 
